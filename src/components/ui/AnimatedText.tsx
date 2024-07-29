@@ -18,7 +18,7 @@ type Props = {
   delay?: number;
 };
 
-function AnimatedText({
+const AnimatedText = React.memo(function Animated({
   text,
   el: Wrapper = "p",
   className,
@@ -118,6 +118,6 @@ function AnimatedText({
       </motion.span>
     </Wrapper>
   );
-}
+});
 
 export default AnimatedText;

@@ -9,8 +9,7 @@ type Props = {};
 export default function Hero({}: Props) {
   const location = "India";
   const time = new Date().toLocaleTimeString().split(":").join(":");
-  // const userloaction = UserTime();
-  // console.log(userloaction);
+  const displayTime = convertTo12Hour(time);
 
   return (
     <div className="pb-20 pt-36 w-full">
@@ -26,7 +25,6 @@ export default function Hero({}: Props) {
         <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
       </div>
       <div className="h-[40rem] w-full dark:bg-black-100 bg-white  dark:bg-grid-white/[0.1] bg-grid-black/[0.2] absolute left-0 top-0 flex items-center justify-center">
-        {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       </div>
       <div className="flex justify-center flex-col items-start gap-3 relative my-10 z-10 w-full h-full ">
@@ -63,13 +61,25 @@ export default function Hero({}: Props) {
               ]} 
             /> */}
           </div>
-          {/* <p className="text-start text-xs tracking-wide my-4 text-white/50">
-            {location} |{" "}
-            {time.split(":")[0] > 12 ? `${time - 12} pm` : time + " am"}
-          </p> */}
+          <p className="text-start text-xs tracking-wide my-4 text-white/50">
+            {location} | {displayTime}
+          </p>
           {/* <UserTime /> */}
         </div>
       </div>
     </div>
   );
 }
+
+const convertTo12Hour = (time: string) => {
+  const [hour, minute, second] = time.split(":");
+  let hourIn12Format = parseInt(hour, 10);
+
+  if (hourIn12Format > 12) {
+    hourIn12Format = hourIn12Format - 12;
+  }
+
+  return `${hourIn12Format}:${minute}:${second} ${
+    hourIn12Format >= 12 ? "am" : "pm"
+  }`;
+};
