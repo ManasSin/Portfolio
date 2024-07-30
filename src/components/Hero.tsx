@@ -3,13 +3,13 @@
 import { IndianFlag } from "@/lib/FlagIcon";
 import AnimatedText from "./ui/AnimatedText";
 import { Spotlight } from "./ui/spotlight";
+import { convertTo12Hour } from "@/lib/utils";
 
 type Props = {};
 
 export default function Hero({}: Props) {
   const location = "India";
-  const time = new Date().toLocaleTimeString().split(":").join(":");
-  const displayTime = convertTo12Hour(time);
+  const displayTime = convertTo12Hour();
 
   return (
     <div className="pb-20 pt-36 w-full">
@@ -19,7 +19,7 @@ export default function Hero({}: Props) {
           fill="white"
         />
         <Spotlight
-          className="top-10 left-full h-[80vh] w-[50vw] rotate-45"
+          className="top-10 left-80 h-[80vh] w-[50vw] rotate-45"
           fill="purple"
         />
         <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
@@ -27,7 +27,7 @@ export default function Hero({}: Props) {
       <div className="h-[40rem] w-full dark:bg-black-100 bg-white  dark:bg-grid-white/[0.1] bg-grid-black/[0.2] absolute left-0 top-0 flex items-center justify-center">
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       </div>
-      <div className="flex justify-center flex-col items-start gap-3 relative my-10 z-10 w-full h-full ">
+      <div className="flex justify-center flex-col items-start gap-3 relative mt-14 mb-24 z-10 w-full h-full ">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-start justify-center">
           <h2 className="uppercase tracking-widest text-sm text-start w-full text-blue-100 max-w-80 my-4">
             Software Engineer from India{" "}
@@ -62,7 +62,10 @@ export default function Hero({}: Props) {
             /> */}
           </div>
           <p className="text-start text-xs tracking-wide my-4 text-white/50">
-            {location} | {displayTime}
+            {location} | {displayTime} |{" "}
+            <span className="text-xs tracking-tight px-2  font-thin leading-tight block text-blue-300">
+              {"fancy clock animation next"}
+            </span>
           </p>
           {/* <UserTime /> */}
         </div>
@@ -70,16 +73,3 @@ export default function Hero({}: Props) {
     </div>
   );
 }
-
-const convertTo12Hour = (time: string) => {
-  const [hour, minute, second] = time.split(":");
-  let hourIn12Format = parseInt(hour, 10);
-
-  if (hourIn12Format > 12) {
-    hourIn12Format = hourIn12Format - 12;
-  }
-
-  return `${hourIn12Format}:${minute}:${second} ${
-    hourIn12Format >= 12 ? "am" : "pm"
-  }`;
-};
