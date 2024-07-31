@@ -74,7 +74,7 @@ const AnimatedText = React.memo(function Animated({
     return () => clearTimeout(timeout);
   }, [isInView]);
   return (
-    <Wrapper className={className} key={Math.random()}>
+    <div className={className}>
       <span className="sr-only">{text}</span>
       <motion.span
         initial="hidden"
@@ -92,9 +92,9 @@ const AnimatedText = React.memo(function Animated({
       >
         {TextArray.map((line, idx) => (
           <span className="block" key={line + idx}>
-            {line.split(" ").map((word) => (
-              <span key={Math.random()} className="inline-block">
-                {word.split("").map((char) => (
+            {line.split(" ").map((word, idx) => (
+              <span key={Math.random() * idx} className="inline-block">
+                {word.split("").map((char, idx) => (
                   <motion.span
                     // @ts-ignore
                     variants={defaultAnimation}
@@ -105,7 +105,7 @@ const AnimatedText = React.memo(function Animated({
                           : ""
                       }`
                     )}
-                    key={char}
+                    key={char + idx}
                   >
                     {char}
                   </motion.span>
@@ -116,7 +116,7 @@ const AnimatedText = React.memo(function Animated({
           </span>
         ))}
       </motion.span>
-    </Wrapper>
+    </div>
   );
 });
 
