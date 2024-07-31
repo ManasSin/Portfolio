@@ -26,13 +26,14 @@
     "tailwind-colors": "^1.1.0",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
-    "three": "^0.167.0",
+    "three": "^0.163.0",
     "three-globe": "^2.31.1"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/three": "^0.167.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "postcss": "^8",
