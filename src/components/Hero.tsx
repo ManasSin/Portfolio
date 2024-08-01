@@ -62,10 +62,10 @@ export default function Hero({}: Props) {
             /> */}
           </div>
           <p className="text-start text-xs tracking-wide my-4 text-white/50">
-            {location} | {displayTime} |{" "}
-            <span className="text-xs tracking-tight px-2  font-thin leading-tight block text-blue-300">
+            {location}
+            {/* <span className="text-xs tracking-tight px-2  font-thin leading-tight block text-blue-300">
               {"fancy clock animation next"}
-            </span>
+            </span> */}
           </p>
           {/* <UserTime /> */}
         </div>

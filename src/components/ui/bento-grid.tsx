@@ -58,7 +58,7 @@ export const BentoGridItem = ({
       ) : id === 2 ? (
         <IdTwo className="flex items-end justify-center absolute -bottom-40 md:bottom-20 md:scale-150 lg:scale-100 lg:-bottom-20" />
       ) : id === 3 ? (
-        <IdThree className="absolute top-0 right-0 " />
+        <IdThree className="absolute -top-10 md:top-0 lg:-top-10 right-8 md:right-0 lg:right-8 -rotate-3 group-hover/bento:rotate-0 group-hover/bento:transition-all transition " />
       ) : null}
       {/* <IdOne className="absolute bottom-0 right-0 " /> */}
     </div>

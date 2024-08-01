@@ -4,7 +4,7 @@ import React from "react";
 type Props = {};
 
 function Banner({}: Props) {
-  const time = "Tuesday June 30, 2024";
+  const time = "Thursday, Aug 1, 2024";
   return (
     <div className="font-extrabold text-base tracking-wider text-gray-800 dark:bg-orange-300 grid items-center relative z-10 h-[3rem] ">
       <p className="text-center mx-auto">
