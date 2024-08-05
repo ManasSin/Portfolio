@@ -47,13 +47,13 @@ Props) {
 
   return (
     <motion.article
-      id={`project.id`}
-      className="h-screen flex items-center justify-center sticky top-0 scroll-smooth snap-y"
+      id={`${project.id}`}
+      className="h-screen w-full flex items-center justify-center sticky top-0 scroll-smooth snap-y"
     >
       <motion.div
         key={key}
         className={cn(
-          `shadow-background  w-full h-[500px] relative  rounded-3xl flex flex-col p-[50px]   ${className}`
+          `shadow-background  w-full h-[600px] relative  rounded-3xl flex flex-col p-[50px]   ${className}`
         )}
         style={{
           scale,

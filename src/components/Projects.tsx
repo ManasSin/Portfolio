@@ -14,7 +14,7 @@ function Projects({}: Props) {
   });
 
   return (
-    <main className="mt-10 mb-[500px">
+    <main className="h-full  w-full my-20">
       {projects.map((project, i) => {
         const targetScale = 1 - (projects.length - i) * 0.05;
         const range = [i * 0.25, 1];

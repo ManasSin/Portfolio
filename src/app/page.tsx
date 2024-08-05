@@ -1,6 +1,7 @@
 import Banner from "@/components/Banner";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
 import { Navbar } from "@/components/ui/Navbar";
 import NavbarSlef from "@/components/ui/NavbarSlef";
 import Image from "next/image";
@@ -17,6 +18,9 @@ export default function Home() {
           <Grid />
         </div>
       </main>
+      <div className="min-w-full  grid grid-rows-[fit-content] grid-cols-1  items-center top-0  sm:px-10 px-5 z-9 dark:bg-black-100">
+        <Projects />
+      </div>
     </>
   );
 }
