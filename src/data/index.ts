@@ -35,13 +35,14 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Demo project card number 1",
-    des: "The description of the project number 1 is still under process of being thought out.",
-    img: "/p1.svg",
+    title: "Task Management Application",
+    des: "This is a project management where you can do more then just you basic task management. It is a web application that allows you to create, edit, and delete tasks for your every need with AI to assist you to create task and summarize it.",
+    img: "/projects/image.png",
     // iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    link: "https://github.com/ManasSin/Work-It",
+    liveLink: "https://work-it-alpha.vercel.app/loggedin",
     className:
-      "dark:bg-rose-400/30 backdrop-blur-md border dark:border-white/[0.1] border-transparent",
+      "dark:bg-[#000019] border dark:border-white/[0.16] border-transparent",
   },
   {
     id: 2,
@@ -50,8 +51,9 @@ export const projects = [
     img: "/p2.svg",
     // iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
     link: "https://github.com/adrianhajdin/zoom-clone",
+    liveLink: "",
     className:
-      "dark:bg-rose-400/30 backdrop-blur-md border dark:border-white/[0.1] border-transparent",
+      "dark:bg-black-100 border dark:border-white/[0.16] border-transparent",
   },
   {
     id: 3,
@@ -60,8 +62,9 @@ export const projects = [
     img: "/p3.svg",
     // iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "https://github.com/adrianhajdin/ai_saas_app",
+    liveLink: "",
     className:
-      "dark:bg-rose-400/30 backdrop-blur-md border dark:border-white/[0.1] border-transparent",
+      "dark:bg-black-100 border dark:border-white/[0.16] border-transparent",
   },
   {
     id: 4,
@@ -70,8 +73,9 @@ export const projects = [
     img: "/p4.svg",
     // iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://github.com/adrianhajdin/iphone",
+    liveLink: "",
     className:
-      "dark:bg-rose-400/30 backdrop-blur-md border dark:border-white/[0.1] border-transparent",
+      "dark:bg-black-100 border dark:border-white/[0.16] border-transparent",
   },
 ];
 

@@ -14,7 +14,12 @@ function Projects({}: Props) {
   });
 
   return (
-    <main className="h-full  w-full my-20">
+    <main className="h-full w-full md:max-w-3xl lg:max-w-5xl mx-auto my-40">
+      <div className="w-full my-14 px-8 z-10 relative grid items-center">
+        <h1 className="text-3xl tracking-wider leading-5 text-white-200 font-bold mx-auto">
+          Most Recent Projects
+        </h1>
+      </div>
       {projects.map((project, i) => {
         const targetScale = 1 - (projects.length - i) * 0.05;
         const range = [i * 0.25, 1];

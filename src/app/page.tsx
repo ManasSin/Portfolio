@@ -21,6 +21,7 @@ export default function Home() {
       <div className="min-w-full  grid grid-rows-[fit-content] grid-cols-1  items-center top-0  sm:px-10 px-5 z-9 dark:bg-black-100">
         <Projects />
       </div>
+      <div className="h-screen w-full"></div>
     </>
   );
 }
