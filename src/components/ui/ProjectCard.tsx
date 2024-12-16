@@ -30,7 +30,7 @@ type Props = {
 };
 
 function ProjectCard({
-  key,
+  // key,
   className,
   progress,
   project,
@@ -54,7 +54,7 @@ Props) {
       className="h-[32rem] mt-16 w-full flex items-center justify-center sticky top-40 scroll-smooth snap-y"
     >
       <motion.div
-        key={key}
+        // key={key}
         className={cn(
           `shadow-background  w-full h-[90%] relative  rounded-3xl flex flex-col gap-5 p-[50px]   ${className}`
         )}

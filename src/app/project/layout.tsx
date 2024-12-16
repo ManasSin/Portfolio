@@ -5,5 +5,5 @@ type Props = {
 };
 
 export default function layout({ children }: Props) {
-  return <div>{children}</div>;
+  return <div className="bg-black-100 min-h-screen h-full">{children}</div>;
 }
